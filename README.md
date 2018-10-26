@@ -1,7 +1,7 @@
 # check_fordidden
 A simple sh script to check of we use only the autorise function precise in subjects
 
-######################################################### USAGE ###################################################################
+########################## USAGE ###################################################################
   
  BE CAREFUL: This bash sript use the binary ltrace, this bin must be install on your machine if you ever want the script to run correctly.
 
@@ -13,7 +13,7 @@ DEFAULT: ./check_forbid.sh ./binary_name
 -f: ./check_forbid.sh -f filename ./binary_name:
   -> the script will take a file with a list of authorized functions, all writting in one line and following this pattern:
         -[function_name]-[function_name]...etc
-        
-########################################################### BUGS ##################################################################
+       
+########################## BUGS ##################################################################
 
 This script use ltrace so for example functions like printf can be replace by puts or putchar by the compiler so be careful and check your code by hand too. ;).
