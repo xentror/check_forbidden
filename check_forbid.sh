@@ -3,7 +3,7 @@
 if [ $# -eq 3 ] && [ "$2" = "-f" ] && [ -r $3 ];then
     args=`cat $3`
 else
-    echo -n "combien de fonction sont autorizes ? "
+    echo -n "Combien de fonctions sont autorisées ? "
     read nb_func
     args=''
 
@@ -22,11 +22,11 @@ ltrace -c $options $args $1 2> log 1> delete
 
 nb_forbid=$((`wc -l count | cut -d ' ' -f 1`-1))
 rm -f delete count
-[ $nb_forbid -eq 0 ] && echo " FELICITATIONS: pas de fonctions interdites utilises" && exit 0
+[ $nb_forbid -eq 0 ] && echo " FELICITATIONS: pas de fonction interdite utilisée" && exit 0
 
-echo -n "$nb_forbid interdites utilises.Voulez vous voir les logs (y/n) ? "
+echo -n "$nb_forbid fonctions interdites utilisées. Voulez-vous voir les logs (y/n) ? "
 read choice
-[ "$choice" = "n" ] && echo "Vous pouvez voire les log dans le fichier log a la racine du program
+[ "$choice" = "n" ] && echo "Vous pouvez voir les logs dans le fichier log à la racine du programme.
 BYE BYE ;)" && exit 
 
 cat log
