@@ -6,7 +6,7 @@ A simple shell script which checks that you only use authorized functions in a c
  **BE CAREFUL: This bash sript use the binary *ltrace*, this bin must be install on your machine if you ever want the script to run correctly.**
 
 ```
-./check_forbid.sh [-f filename] ./binary_name
+./check_forbid.sh ./binary_name [-f filename]
 ```
 
 ### Default without parameters:
@@ -19,7 +19,7 @@ The script will ask you how many authorized functions you have and you will have
         
 ### Functions list file (*-f*): 
 ```
-./check_forbid.sh -f filename ./binary_name:
+./check_forbid.sh ./binary_name -f filename:
 ```
 The script will take a file with a list of authorized functions, all writting in one line and following this pattern:
   
