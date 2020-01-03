@@ -1,5 +1,5 @@
 # check_fordidden
-A simple shell script which checks that you only use authorized functions in a compiled binary.
+A shell script which checks that you only use authorized functions in a compiled binary.
 
 ## USAGE
   
